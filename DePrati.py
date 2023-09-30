@@ -12,7 +12,6 @@ collection = db.productos
 
 @app.route('/fetch-and-store', methods=['GET'])
 def fetch_and_store_data():
-    # Tu código para obtener y almacenar datos en la base de datos (como se mostró en tu código anterior)
 
     return jsonify({"message": "Datos almacenados en MongoDB"})
 
@@ -21,7 +20,6 @@ def get_products():
 
     products = list(collection.find({}))
 
-    # Convierte los documentos de MongoDB en un formato JSON
     product_list = []
     for product in products:
         product_list.append({

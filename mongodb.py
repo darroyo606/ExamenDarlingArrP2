@@ -9,7 +9,6 @@ password=os.getenv('MONGO_PASSWORD')
 uri = f"mongodb+srv://{user}:{password}@cluster0.ij08aaa.mongodb.net/?retryWrites=true&w=majority"
 
 client = MongoClient(uri)
-
 try:
     client.admin.command('ping')
     print("Ping, La conexion ha sido exitosa!")
